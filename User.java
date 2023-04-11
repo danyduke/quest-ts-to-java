@@ -1,12 +1,12 @@
 import java.sql.Date;
 
-public class User {
+public class User<Address> {
     private Date birthdate;
     private Number size;
     private String photos;
-    private Address address;
+    private String address;
 
-    public User(Date birthdate, Number size, String photos, Address address) {
+    public User(Date birthdate, Number size, String photos, String address) {
         this.birthdate = birthdate;
         this.size = size;
         this.photos = photos;
@@ -22,6 +22,6 @@ public class User {
     public String getPhotos() {return photos;}
     public void setPhotos(String photos) {this.photos = photos;}
 
-    public Address getAddress() {return address;}
-    public void setAddress(Address address) {this.address = address;}
+    public String getAddress() {return address;}
+    public void setAddress(String address) {this.address = address;}
 }
